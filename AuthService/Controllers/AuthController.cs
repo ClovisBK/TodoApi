@@ -44,7 +44,8 @@ namespace AuthService.Controllers
                 UserName = dto.Email,
                 Email = dto.Email,
                 Phone = dto.Phone,
-                FullName = dto.FullName
+                FirstName = dto.FirstName,
+                LastName = dto.LastName
             };
 
             var result = await _userManager.CreateAsync(user, dto.Password);

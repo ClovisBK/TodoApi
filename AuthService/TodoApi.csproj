@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Configurations\**" />
+    <Compile Remove="Extensions\**" />
+    <Compile Remove="Helpers\**" />
+    <Content Remove="Configurations\**" />
+    <Content Remove="Extensions\**" />
+    <Content Remove="Helpers\**" />
+    <EmbeddedResource Remove="Configurations\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <None Remove="Configurations\**" />
+    <None Remove="Extensions\**" />
+    <None Remove="Helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.22" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.22" />
@@ -17,12 +32,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Configurations\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

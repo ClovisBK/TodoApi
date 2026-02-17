@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AuthService.Migrations
+namespace TodoApi.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20251125072845_MigrationWithSeeding")]
-    partial class MigrationWithSeeding
+    [Migration("20260216141838_InitialCreateTodo")]
+    partial class InitialCreateTodo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,10 @@ namespace AuthService.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -100,17 +103,18 @@ namespace AuthService.Migrations
                         {
                             Id = "100",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "39e2193d-7579-44a8-9de2-009bba35585c",
+                            ConcurrencyStamp = "cdb8da13-5c97-478a-b927-4e1877c075bc",
                             Email = "wakebeh14@gmail.com",
                             EmailConfirmed = true,
-                            FullName = "Wa Kebeh Mbong",
+                            FirstName = "Wa Kebeh",
+                            LastName = "Mbong",
                             LockoutEnabled = false,
                             NormalizedEmail = "WAKEBEH14@GMAIL.COM",
                             NormalizedUserName = "ADMIN@SYSTEM.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMOiDUY+PxfcQ91KxZj0Vpy4KbqWW3dTK7zv8itXsS2dAdg/l67YCVobWh0wGasb3Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIHpgT4Nad7K1XsLtQSB9FBlABhDrN9SbM4vFij5YaTBrI6xzYUIAs6WgFvRJ0hpEg==",
                             Phone = "676455676",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e57576d9-cc53-4d04-8097-f68e9488f7cd",
+                            SecurityStamp = "0cd48421-d1f1-45e8-9b27-8d58c70be9eb",
                             TwoFactorEnabled = false,
                             UserName = "admin@system.com"
                         });

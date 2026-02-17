@@ -32,7 +32,8 @@ namespace AuthService.Data
                 Email = "wakebeh14@gmail.com",
                 NormalizedEmail = "WAKEBEH14@GMAIL.COM",
                 EmailConfirmed = true,
-                FullName = "Wa Kebeh Mbong",
+                FirstName = "Wa Kebeh",
+                LastName = "Mbong",
                 Phone = "676455676"
             };
 
